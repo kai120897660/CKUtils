@@ -15,6 +15,9 @@
 		63BD4536222FF05E00A63352 /* CKUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD4535222FF05E00A63352 /* CKUtilsTests.swift */; };
 		63BD4541222FF05E00A63352 /* CKUtilsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD4540222FF05E00A63352 /* CKUtilsUITests.swift */; };
 		63BD455A2230DF9700A63352 /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD45592230DF9700A63352 /* CustomTimer.swift */; };
+		63BD455C2230F97100A63352 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD455B2230F97100A63352 /* AudioPlayerManager.swift */; };
+		63BD455E2230F9AA00A63352 /* CKFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD455D2230F9A900A63352 /* CKFunction.swift */; };
+		63BD45602230F9B700A63352 /* CKConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD455F2230F9B700A63352 /* CKConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		63BD4540222FF05E00A63352 /* CKUtilsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKUtilsUITests.swift; sourceTree = "<group>"; };
 		63BD4542222FF05E00A63352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63BD45592230DF9700A63352 /* CustomTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
+		63BD455B2230F97100A63352 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		63BD455D2230F9A900A63352 /* CKFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKFunction.swift; sourceTree = "<group>"; };
+		63BD455F2230F9B700A63352 /* CKConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +137,10 @@
 		63BD45582230DF8500A63352 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				63BD455F2230F9B700A63352 /* CKConstant.swift */,
 				63BD45592230DF9700A63352 /* CustomTimer.swift */,
+				63BD455B2230F97100A63352 /* AudioPlayerManager.swift */,
+				63BD455D2230F9A900A63352 /* CKFunction.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -267,9 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63BD455E2230F9AA00A63352 /* CKFunction.swift in Sources */,
 				63BD455A2230DF9700A63352 /* CustomTimer.swift in Sources */,
+				63BD455C2230F97100A63352 /* AudioPlayerManager.swift in Sources */,
 				63BD4523222FF05C00A63352 /* ViewController.swift in Sources */,
 				63BD4521222FF05C00A63352 /* AppDelegate.swift in Sources */,
+				63BD45602230F9B700A63352 /* CKConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

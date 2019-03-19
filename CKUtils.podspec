@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "CKUtils"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.2"
   spec.summary      = "Custom Swift Utils"
   spec.description  = <<-DESC
                       this project is custom swift lib for utils   
@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/kai120897660/CKUtils.git", :tag => "#{spec.version}" }
 
 
-  spec.source_files  = "CKUtils", "CKUtils/CKUtils/Utils/*.swift"
+  spec.source_files  = "CKUtils", "CKUtils/Utils/**/*.swift"
   spec.requires_arc = true
 
 
