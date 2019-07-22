@@ -7,6 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631937B622E5938C00B0D2A2 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937A922E5938C00B0D2A2 /* UIButtonExtension.swift */; };
+		631937B822E5938C00B0D2A2 /* ColorString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937AC22E5938C00B0D2A2 /* ColorString.swift */; };
+		631937B922E5938C00B0D2A2 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937AD22E5938C00B0D2A2 /* ArrayExtension.swift */; };
+		631937BA22E5938C00B0D2A2 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937AE22E5938C00B0D2A2 /* ImageExtension.swift */; };
+		631937BC22E5938C00B0D2A2 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937B022E5938C00B0D2A2 /* ViewExtension.swift */; };
+		631937BE22E5938C00B0D2A2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937B222E5938C00B0D2A2 /* StringExtension.swift */; };
+		631937BF22E5938C00B0D2A2 /* labelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937B322E5938C00B0D2A2 /* labelExtension.swift */; };
+		631937C022E5938C00B0D2A2 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937B422E5938C00B0D2A2 /* DateExtension.swift */; };
+		631937F622E597B900B0D2A2 /* LivePlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937CC22E597B800B0D2A2 /* LivePlayViewModel.swift */; };
+		631937F722E597B900B0D2A2 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937CD22E597B800B0D2A2 /* UserProfileViewModel.swift */; };
+		631937F822E597B900B0D2A2 /* IBoxListMonitorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937CE22E597B800B0D2A2 /* IBoxListMonitorViewModel.swift */; };
+		631937F922E597B900B0D2A2 /* IBoxRandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937CF22E597B800B0D2A2 /* IBoxRandingViewModel.swift */; };
+		631937FA22E597B900B0D2A2 /* RealTimeFeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937D022E597B800B0D2A2 /* RealTimeFeedsViewModel.swift */; };
+		631937FB22E597B900B0D2A2 /* AdminMianVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937D222E597B800B0D2A2 /* AdminMianVC.swift */; };
+		631937FC22E597B900B0D2A2 /* IBoxRankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937D322E597B900B0D2A2 /* IBoxRankingVC.swift */; };
+		631937FD22E597B900B0D2A2 /* ActiveGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937D422E597B900B0D2A2 /* ActiveGroupVC.swift */; };
+		631937FE22E597B900B0D2A2 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937D522E597B900B0D2A2 /* UserProfileVC.swift */; };
+		631937FF22E597B900B0D2A2 /* IBoxListMonitorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937D622E597B900B0D2A2 /* IBoxListMonitorVC.swift */; };
+		6319380022E597B900B0D2A2 /* AdminBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937D722E597B900B0D2A2 /* AdminBaseVC.swift */; };
+		6319380122E597B900B0D2A2 /* RealTimeFeedsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937D822E597B900B0D2A2 /* RealTimeFeedsVC.swift */; };
+		6319380222E597B900B0D2A2 /* MissionRankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937D922E597B900B0D2A2 /* MissionRankingVC.swift */; };
+		6319380322E597B900B0D2A2 /* MofangDistribuedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937DA22E597B900B0D2A2 /* MofangDistribuedVC.swift */; };
+		6319380422E597B900B0D2A2 /* IBOXListMonitorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937DC22E597B900B0D2A2 /* IBOXListMonitorModel.swift */; };
+		6319380522E597B900B0D2A2 /* ActiveGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937DD22E597B900B0D2A2 /* ActiveGroupModel.swift */; };
+		6319380622E597B900B0D2A2 /* MofangCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937DE22E597B900B0D2A2 /* MofangCountModel.swift */; };
+		6319380722E597B900B0D2A2 /* IBOXStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937DF22E597B900B0D2A2 /* IBOXStatusModel.swift */; };
+		6319380822E597B900B0D2A2 /* RealFeedsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937E022E597B900B0D2A2 /* RealFeedsModel.swift */; };
+		6319380922E597B900B0D2A2 /* IBOXListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937E122E597B900B0D2A2 /* IBOXListModel.swift */; };
+		6319380A22E597B900B0D2A2 /* IBoxRandingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937E222E597B900B0D2A2 /* IBoxRandingModel.swift */; };
+		6319380B22E597B900B0D2A2 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937E322E597B900B0D2A2 /* UserProfileModel.swift */; };
+		6319380C22E597B900B0D2A2 /* IBoxRandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631937E522E597B900B0D2A2 /* IBoxRandingCell.xib */; };
+		6319380D22E597B900B0D2A2 /* LivePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 631937E622E597B900B0D2A2 /* LivePlayerView.m */; };
+		6319380E22E597B900B0D2A2 /* UserProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631937E722E597B900B0D2A2 /* UserProfileCell.xib */; };
+		6319380F22E597B900B0D2A2 /* IBoxRandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937E822E597B900B0D2A2 /* IBoxRandingCell.swift */; };
+		6319381022E597B900B0D2A2 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937E922E597B900B0D2A2 /* UserProfileCell.swift */; };
+		6319381122E597B900B0D2A2 /* RealTimeFeedsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631937EA22E597B900B0D2A2 /* RealTimeFeedsCell.xib */; };
+		6319381222E597B900B0D2A2 /* IBoxListMonitorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937EB22E597B900B0D2A2 /* IBoxListMonitorCell.swift */; };
+		6319381322E597B900B0D2A2 /* IBoxListMonitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631937ED22E597B900B0D2A2 /* IBoxListMonitorCell.xib */; };
+		6319381422E597B900B0D2A2 /* RealTimeFeedsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937EE22E597B900B0D2A2 /* RealTimeFeedsCell.swift */; };
+		6319381522E597B900B0D2A2 /* BigData.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631937EF22E597B900B0D2A2 /* BigData.xcassets */; };
+		6319381D22E597D600B0D2A2 /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319381922E597D600B0D2A2 /* CustomTimer.swift */; };
+		6319382222E59B6B00B0D2A2 /* CKConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319381F22E59B6B00B0D2A2 /* CKConstant.swift */; };
+		6319382322E59B6B00B0D2A2 /* CKEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319382022E59B6B00B0D2A2 /* CKEnum.swift */; };
+		6319382422E59B6B00B0D2A2 /* CKFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319382122E59B6B00B0D2A2 /* CKFunction.swift */; };
 		63BD4521222FF05C00A63352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD4520222FF05C00A63352 /* AppDelegate.swift */; };
 		63BD4523222FF05C00A63352 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD4522222FF05C00A63352 /* ViewController.swift */; };
 		63BD4526222FF05C00A63352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BD4524222FF05C00A63352 /* Main.storyboard */; };
@@ -34,6 +78,51 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		631937A922E5938C00B0D2A2 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		631937AC22E5938C00B0D2A2 /* ColorString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorString.swift; sourceTree = "<group>"; };
+		631937AD22E5938C00B0D2A2 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		631937AE22E5938C00B0D2A2 /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		631937B022E5938C00B0D2A2 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		631937B222E5938C00B0D2A2 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		631937B322E5938C00B0D2A2 /* labelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = labelExtension.swift; sourceTree = "<group>"; };
+		631937B422E5938C00B0D2A2 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		631937CC22E597B800B0D2A2 /* LivePlayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePlayViewModel.swift; sourceTree = "<group>"; };
+		631937CD22E597B800B0D2A2 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		631937CE22E597B800B0D2A2 /* IBoxListMonitorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBoxListMonitorViewModel.swift; sourceTree = "<group>"; };
+		631937CF22E597B800B0D2A2 /* IBoxRandingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBoxRandingViewModel.swift; sourceTree = "<group>"; };
+		631937D022E597B800B0D2A2 /* RealTimeFeedsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealTimeFeedsViewModel.swift; sourceTree = "<group>"; };
+		631937D222E597B800B0D2A2 /* AdminMianVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminMianVC.swift; sourceTree = "<group>"; };
+		631937D322E597B900B0D2A2 /* IBoxRankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBoxRankingVC.swift; sourceTree = "<group>"; };
+		631937D422E597B900B0D2A2 /* ActiveGroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveGroupVC.swift; sourceTree = "<group>"; };
+		631937D522E597B900B0D2A2 /* UserProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
+		631937D622E597B900B0D2A2 /* IBoxListMonitorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBoxListMonitorVC.swift; sourceTree = "<group>"; };
+		631937D722E597B900B0D2A2 /* AdminBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminBaseVC.swift; sourceTree = "<group>"; };
+		631937D822E597B900B0D2A2 /* RealTimeFeedsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealTimeFeedsVC.swift; sourceTree = "<group>"; };
+		631937D922E597B900B0D2A2 /* MissionRankingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionRankingVC.swift; sourceTree = "<group>"; };
+		631937DA22E597B900B0D2A2 /* MofangDistribuedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MofangDistribuedVC.swift; sourceTree = "<group>"; };
+		631937DC22E597B900B0D2A2 /* IBOXListMonitorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBOXListMonitorModel.swift; sourceTree = "<group>"; };
+		631937DD22E597B900B0D2A2 /* ActiveGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveGroupModel.swift; sourceTree = "<group>"; };
+		631937DE22E597B900B0D2A2 /* MofangCountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MofangCountModel.swift; sourceTree = "<group>"; };
+		631937DF22E597B900B0D2A2 /* IBOXStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBOXStatusModel.swift; sourceTree = "<group>"; };
+		631937E022E597B900B0D2A2 /* RealFeedsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealFeedsModel.swift; sourceTree = "<group>"; };
+		631937E122E597B900B0D2A2 /* IBOXListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBOXListModel.swift; sourceTree = "<group>"; };
+		631937E222E597B900B0D2A2 /* IBoxRandingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBoxRandingModel.swift; sourceTree = "<group>"; };
+		631937E322E597B900B0D2A2 /* UserProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
+		631937E522E597B900B0D2A2 /* IBoxRandingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBoxRandingCell.xib; sourceTree = "<group>"; };
+		631937E622E597B900B0D2A2 /* LivePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePlayerView.m; sourceTree = "<group>"; };
+		631937E722E597B900B0D2A2 /* UserProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileCell.xib; sourceTree = "<group>"; };
+		631937E822E597B900B0D2A2 /* IBoxRandingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBoxRandingCell.swift; sourceTree = "<group>"; };
+		631937E922E597B900B0D2A2 /* UserProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
+		631937EA22E597B900B0D2A2 /* RealTimeFeedsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RealTimeFeedsCell.xib; sourceTree = "<group>"; };
+		631937EB22E597B900B0D2A2 /* IBoxListMonitorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBoxListMonitorCell.swift; sourceTree = "<group>"; };
+		631937EC22E597B900B0D2A2 /* LivePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePlayerView.h; sourceTree = "<group>"; };
+		631937ED22E597B900B0D2A2 /* IBoxListMonitorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBoxListMonitorCell.xib; sourceTree = "<group>"; };
+		631937EE22E597B900B0D2A2 /* RealTimeFeedsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealTimeFeedsCell.swift; sourceTree = "<group>"; };
+		631937EF22E597B900B0D2A2 /* BigData.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BigData.xcassets; sourceTree = "<group>"; };
+		6319381922E597D600B0D2A2 /* CustomTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
+		6319381F22E59B6B00B0D2A2 /* CKConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKConstant.swift; sourceTree = "<group>"; };
+		6319382022E59B6B00B0D2A2 /* CKEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKEnum.swift; sourceTree = "<group>"; };
+		6319382122E59B6B00B0D2A2 /* CKFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKFunction.swift; sourceTree = "<group>"; };
 		63BD451D222FF05C00A63352 /* CKUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BD4520222FF05C00A63352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63BD4522222FF05C00A63352 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,9 +163,110 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		631937A722E5938C00B0D2A2 /* CKExstension */ = {
+			isa = PBXGroup;
+			children = (
+				631937A922E5938C00B0D2A2 /* UIButtonExtension.swift */,
+				631937AC22E5938C00B0D2A2 /* ColorString.swift */,
+				631937AD22E5938C00B0D2A2 /* ArrayExtension.swift */,
+				631937AE22E5938C00B0D2A2 /* ImageExtension.swift */,
+				631937B022E5938C00B0D2A2 /* ViewExtension.swift */,
+				631937B222E5938C00B0D2A2 /* StringExtension.swift */,
+				631937B322E5938C00B0D2A2 /* labelExtension.swift */,
+				631937B422E5938C00B0D2A2 /* DateExtension.swift */,
+			);
+			path = CKExstension;
+			sourceTree = "<group>";
+		};
+		631937CA22E597B800B0D2A2 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				631937CB22E597B800B0D2A2 /* viewModel */,
+				631937D122E597B800B0D2A2 /* controller */,
+				631937DB22E597B900B0D2A2 /* model */,
+				631937E422E597B900B0D2A2 /* view */,
+				631937EF22E597B900B0D2A2 /* BigData.xcassets */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		631937CB22E597B800B0D2A2 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				631937CC22E597B800B0D2A2 /* LivePlayViewModel.swift */,
+				631937CD22E597B800B0D2A2 /* UserProfileViewModel.swift */,
+				631937CE22E597B800B0D2A2 /* IBoxListMonitorViewModel.swift */,
+				631937CF22E597B800B0D2A2 /* IBoxRandingViewModel.swift */,
+				631937D022E597B800B0D2A2 /* RealTimeFeedsViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		631937D122E597B800B0D2A2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				631937D222E597B800B0D2A2 /* AdminMianVC.swift */,
+				631937D322E597B900B0D2A2 /* IBoxRankingVC.swift */,
+				631937D422E597B900B0D2A2 /* ActiveGroupVC.swift */,
+				631937D522E597B900B0D2A2 /* UserProfileVC.swift */,
+				631937D622E597B900B0D2A2 /* IBoxListMonitorVC.swift */,
+				631937D722E597B900B0D2A2 /* AdminBaseVC.swift */,
+				631937D822E597B900B0D2A2 /* RealTimeFeedsVC.swift */,
+				631937D922E597B900B0D2A2 /* MissionRankingVC.swift */,
+				631937DA22E597B900B0D2A2 /* MofangDistribuedVC.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		631937DB22E597B900B0D2A2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				631937DC22E597B900B0D2A2 /* IBOXListMonitorModel.swift */,
+				631937DD22E597B900B0D2A2 /* ActiveGroupModel.swift */,
+				631937DE22E597B900B0D2A2 /* MofangCountModel.swift */,
+				631937DF22E597B900B0D2A2 /* IBOXStatusModel.swift */,
+				631937E022E597B900B0D2A2 /* RealFeedsModel.swift */,
+				631937E122E597B900B0D2A2 /* IBOXListModel.swift */,
+				631937E222E597B900B0D2A2 /* IBoxRandingModel.swift */,
+				631937E322E597B900B0D2A2 /* UserProfileModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		631937E422E597B900B0D2A2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				631937E522E597B900B0D2A2 /* IBoxRandingCell.xib */,
+				631937E622E597B900B0D2A2 /* LivePlayerView.m */,
+				631937E722E597B900B0D2A2 /* UserProfileCell.xib */,
+				631937E822E597B900B0D2A2 /* IBoxRandingCell.swift */,
+				631937E922E597B900B0D2A2 /* UserProfileCell.swift */,
+				631937EA22E597B900B0D2A2 /* RealTimeFeedsCell.xib */,
+				631937EB22E597B900B0D2A2 /* IBoxListMonitorCell.swift */,
+				631937EC22E597B900B0D2A2 /* LivePlayerView.h */,
+				631937ED22E597B900B0D2A2 /* IBoxListMonitorCell.xib */,
+				631937EE22E597B900B0D2A2 /* RealTimeFeedsCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		6319381622E597D600B0D2A2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6319381F22E59B6B00B0D2A2 /* CKConstant.swift */,
+				6319382022E59B6B00B0D2A2 /* CKEnum.swift */,
+				6319382122E59B6B00B0D2A2 /* CKFunction.swift */,
+				6319381922E597D600B0D2A2 /* CustomTimer.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		63BD4514222FF05C00A63352 = {
 			isa = PBXGroup;
 			children = (
+				6319381622E597D600B0D2A2 /* Utils */,
+				631937CA22E597B800B0D2A2 /* Admin */,
+				631937A722E5938C00B0D2A2 /* CKExstension */,
 				63BD451F222FF05C00A63352 /* CKUtils */,
 				63BD4534222FF05E00A63352 /* CKUtilsTests */,
 				63BD453F222FF05E00A63352 /* CKUtilsUITests */,
@@ -230,7 +420,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				63BD452B222FF05E00A63352 /* LaunchScreen.storyboard in Resources */,
+				6319380E22E597B900B0D2A2 /* UserProfileCell.xib in Resources */,
+				6319380C22E597B900B0D2A2 /* IBoxRandingCell.xib in Resources */,
 				63BD4528222FF05E00A63352 /* Assets.xcassets in Resources */,
+				6319381522E597B900B0D2A2 /* BigData.xcassets in Resources */,
+				6319381122E597B900B0D2A2 /* RealTimeFeedsCell.xib in Resources */,
+				6319381322E597B900B0D2A2 /* IBoxListMonitorCell.xib in Resources */,
 				63BD4526222FF05C00A63352 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +451,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6319380F22E597B900B0D2A2 /* IBoxRandingCell.swift in Sources */,
+				631937B822E5938C00B0D2A2 /* ColorString.swift in Sources */,
+				6319380922E597B900B0D2A2 /* IBOXListModel.swift in Sources */,
+				631937FB22E597B900B0D2A2 /* AdminMianVC.swift in Sources */,
+				6319380122E597B900B0D2A2 /* RealTimeFeedsVC.swift in Sources */,
+				6319380622E597B900B0D2A2 /* MofangCountModel.swift in Sources */,
+				631937C022E5938C00B0D2A2 /* DateExtension.swift in Sources */,
 				63BD4523222FF05C00A63352 /* ViewController.swift in Sources */,
+				6319380522E597B900B0D2A2 /* ActiveGroupModel.swift in Sources */,
+				631937F622E597B900B0D2A2 /* LivePlayViewModel.swift in Sources */,
+				631937FD22E597B900B0D2A2 /* ActiveGroupVC.swift in Sources */,
+				6319380322E597B900B0D2A2 /* MofangDistribuedVC.swift in Sources */,
+				6319380722E597B900B0D2A2 /* IBOXStatusModel.swift in Sources */,
+				6319381022E597B900B0D2A2 /* UserProfileCell.swift in Sources */,
+				6319381222E597B900B0D2A2 /* IBoxListMonitorCell.swift in Sources */,
+				631937B622E5938C00B0D2A2 /* UIButtonExtension.swift in Sources */,
+				631937BC22E5938C00B0D2A2 /* ViewExtension.swift in Sources */,
+				6319381422E597B900B0D2A2 /* RealTimeFeedsCell.swift in Sources */,
+				6319382222E59B6B00B0D2A2 /* CKConstant.swift in Sources */,
+				631937F922E597B900B0D2A2 /* IBoxRandingViewModel.swift in Sources */,
+				6319380222E597B900B0D2A2 /* MissionRankingVC.swift in Sources */,
+				6319382322E59B6B00B0D2A2 /* CKEnum.swift in Sources */,
+				6319380822E597B900B0D2A2 /* RealFeedsModel.swift in Sources */,
+				6319380D22E597B900B0D2A2 /* LivePlayerView.m in Sources */,
+				631937B922E5938C00B0D2A2 /* ArrayExtension.swift in Sources */,
+				631937BF22E5938C00B0D2A2 /* labelExtension.swift in Sources */,
+				6319380B22E597B900B0D2A2 /* UserProfileModel.swift in Sources */,
+				631937FA22E597B900B0D2A2 /* RealTimeFeedsViewModel.swift in Sources */,
+				6319381D22E597D600B0D2A2 /* CustomTimer.swift in Sources */,
+				631937BE22E5938C00B0D2A2 /* StringExtension.swift in Sources */,
+				6319380022E597B900B0D2A2 /* AdminBaseVC.swift in Sources */,
 				63BD4521222FF05C00A63352 /* AppDelegate.swift in Sources */,
+				631937F722E597B900B0D2A2 /* UserProfileViewModel.swift in Sources */,
+				631937FF22E597B900B0D2A2 /* IBoxListMonitorVC.swift in Sources */,
+				631937BA22E5938C00B0D2A2 /* ImageExtension.swift in Sources */,
+				6319380A22E597B900B0D2A2 /* IBoxRandingModel.swift in Sources */,
+				6319382422E59B6B00B0D2A2 /* CKFunction.swift in Sources */,
+				631937F822E597B900B0D2A2 /* IBoxListMonitorViewModel.swift in Sources */,
+				631937FC22E597B900B0D2A2 /* IBoxRankingVC.swift in Sources */,
+				6319380422E597B900B0D2A2 /* IBOXListMonitorModel.swift in Sources */,
+				631937FE22E597B900B0D2A2 /* UserProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

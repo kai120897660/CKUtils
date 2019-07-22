@@ -11,7 +11,7 @@ import Photos
 
 func ck_print(_ items: Any?) {
     #if DEBUG
-    if !isDistribution() && items != nil {
+    if items != nil {
         print(items!)
     }
     #endif
@@ -28,9 +28,8 @@ func isDistribution() ->  Bool {
 
 ///localized language
 func localizedString(_ key: String) -> String {
-//    let word = Bundle.main.loadNibNamed(key, owner: "", options: nil) as? String
-    let word = NSLocalizedString(key, comment: "")
-    return word
+    
+    return ""//LanguageUtils.shared.bundle.localizedString(forKey: key, value: nil, table: "InfoPlist")
 }
 
 func localizedGroup(_ key1: String, _ key2: String) -> String {
@@ -48,10 +47,18 @@ func numString(_ str: String?) -> CGFloat {
     if str == nil || str == "(null)" || str == "null" || (str?.isEmpty)! {
         return 0
     }
-    if let num = Float(str!) {
+    let nonDigits = CharacterSet.decimalDigits.inverted
+    let numStr = str!.trimmingCharacters(in: nonDigits)
+    if let num = Float(numStr) {
+        
         return CGFloat(num)
     }
     return 0
+}
+
+///字体大小
+func ck_fontSize(_ size: CGFloat) -> UIFont {
+    return UIFont.systemFont(ofSize: size)
 }
 
 //MARK:  --    以6为标准比例缩放
@@ -84,9 +91,9 @@ func alertViewShow(title: String,leftTitle: String?, rightTitle: String?, doneAc
 
 func alertViewShow(title: String, doneAction: DoneClosure?) {
     let alertVC = UIAlertController.init(title: title, message: "", preferredStyle: .alert)
-    alertVC.addAction(UIAlertAction.init(title: localizedString("Cancel"), style: UIAlertAction.Style.default, handler: { (action) in
-        doneAction?(0)
-    }))
+//    alertVC.addAction(UIAlertAction.init(title: "取消", style: UIAlertAction.Style.default, handler: { (action) in
+//        doneAction?(0)
+//    }))
     alertVC.addAction(UIAlertAction.init(title: localizedString("Confirm"), style: UIAlertAction.Style.default, handler: { (action) in
         doneAction?(1)
     }))
@@ -116,51 +123,50 @@ func sheetViewShow(textArray: Array<String>, doneAction: DoneClosure?) {
 
 ///相机、相册选项弹出框
 func cameraSheetShow(_ doneAction: DoneClosure?) {
-    sheetViewShow(textArray: [localizedString("Album"), localizedString("Take Photo")], doneAction: doneAction)
+    sheetViewShow(textArray: [localizedString("Take Photo"), localizedString("Select from album")], doneAction: doneAction)
 }
 
 func currentVC() -> UIViewController {
-    let window = UIApplication.shared.keyWindow
-    var VC = window?.rootViewController
-    if (VC?.isKind(of: MainScrollVC.self))! {
-        VC = VC?.children.first
-        if (VC?.isKind(of: UINavigationController.self))! {
-            let nav = VC as? UINavigationController
-            VC = nav?.children.last
-            if (VC?.isKind(of: UITabBarController.self))! {
-                let tab = VC as? UITabBarController
-                VC = tab?.viewControllers![(tab?.selectedIndex)!]
-            }
+    var VC = UIApplication.shared.keyWindow?.rootViewController
+    
+//    VC = VC?.children.first
+    if let nav = VC as? UINavigationController {
+        VC = nav.children.last
+        if let tab = VC as? UITabBarController {
+            VC = tab.viewControllers![tab.selectedIndex]
+        }
+    }else if let tab = VC as? UITabBarController {
+        VC = tab.viewControllers![tab.selectedIndex]
+        if let nav = VC as? UINavigationController {
+            VC = nav.children.last
         }
     }
+
+//    VC = (VC?.navigationController?.viewControllers.last)!
     
     return VC!
-}
-
-///获取图片完整url
-func getImageUrl(_ url: String) -> String {
-    return getImageHost + "/\(url)"
 }
 
 ///弹出框的显示
 ///成功
 func showSuccess(_ text: String) {
-    SVProgressHUD.showSuccess(withStatus: text)
+//    SVProgressHUD.showSuccess(withStatus: text)
 //    SVProgressHUD.dismiss(withDelay: 2.0)
 }
 ///错误
 func showError(_ text: String) {
-    SVProgressHUD.showError(withStatus: text)
+//    SVProgressHUD.showError(withStatus: text)
 //    SVProgressHUD.dismiss(withDelay: 2.0)
 }
 ///信息
 func showInfo(_ text: String) {
-    SVProgressHUD.showInfo(withStatus: text)
+//    SVProgressHUD.showInfo(withStatus: text)
 //    SVProgressHUD.dismiss(withDelay: 2.0)
+//    alertViewShow(title: text, doneAction: nil)
 }
 ///文字
 func showNone(_ text: String)  {
-    SVProgressHUD.show(withStatus: text)
+//    SVProgressHUD.show(withStatus: text)
 //    SVProgressHUD.dismiss(withDelay: 2.0)
 }
 
@@ -194,19 +200,17 @@ func deviceModel () -> String? {
     case "iPhone10,1", "iPhone10,4":  return "iPhone 8"
     case "iPhone10,2", "iPhone10,5":  return "iPhone 8 Plus"
     case "iPhone10,3", "iPhone10,6":  return "iPhone X"
-    case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return "iPad 2"
-    case "iPad3,1", "iPad3,2", "iPad3,3":           return "iPad 3"
-    case "iPad3,4", "iPad3,5", "iPad3,6":           return "iPad 4"
-    case "iPad4,1", "iPad4,2", "iPad4,3":           return "iPad Air"
-    case "iPad5,3", "iPad5,4":                      return "iPad Air 2"
-    case "iPad2,5", "iPad2,6", "iPad2,7":           return "iPad Mini"
-    case "iPad4,4", "iPad4,5", "iPad4,6":           return "iPad Mini 2"
-    case "iPad4,7", "iPad4,8", "iPad4,9":           return "iPad Mini 3"
-    case "iPad5,1", "iPad5,2":                      return "iPad Mini 4"
-    case "iPad6,7", "iPad6,8":                      return "iPad Pro"
-    case "AppleTV5,3":                              return "Apple TV"
-    case "i386", "x86_64":                          return "iPhone X"//"Simulator"
+    case "iPhone11,2":                return "iPhone XS"
+    case "iPhone11,4", "iPhone11,6":  return "iPhone XS Max"
+    case "iPhone11,8":                return "iPhone XR"
+    case "i386", "x86_64":                          return "Simulator"
     default:
         return identifier
+    }
+}
+
+class CKFunction: NSObject {
+    @objc class func ck_localizedString(_ key: String) -> String {
+        return localizedString(key)
     }
 }

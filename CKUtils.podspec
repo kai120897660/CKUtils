@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "CKUtils"
-  spec.version      = "1.1.0"
+  spec.version      = "1.1.1"
   spec.summary      = "Custom Swift Utils"
   spec.description  = <<-DESC
                       this project is custom swift lib for utils   
@@ -22,11 +22,26 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/kai120897660/CKUtils.git", :tag => "#{spec.version}" }
 
 
-  spec.source_files  = "CKUtils", "CKUtils/Admin/**/*.swift"
+#  spec.source_files  = "CKExstension"
+  spec.subspec "CkCustom" do |ss|
+    ss.source_files  = "CKExstension", "Utils"
+    ss.dependency "RxSwift"
+    ss.dependency "RxCocoa"
+    ss.dependency "SnapKit"
+  end
 
 #  spec.subspec "Admin" do |ss|
- #   ss.source_files  = "Admin/**/*.swift"
- # end
+#    ss.source_files  = "Admin/**/*.swift"
+#    ss.dependency "RxSwift"
+#    ss.dependency "RxCocoa"
+#    ss.dependency "RxDataSources"
+#    ss.dependency "Moya"
+#    ss.dependency "SnapKit"
+#    ss.dependency "HandyJSON"
+#    ss.dependency "EZOpenSDK"
+#    ss.dependency "MJRefresh"
+#    ss.dependency "SDWebImage"
+#  end
 
   spec.requires_arc = true
 
