@@ -22,14 +22,11 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/kai120897660/CKUtils.git", :tag => "#{spec.version}" }
 
 
-#  spec.source_files  = "CKExstension"
-  spec.subspec "CkCustom" do |ss|
-    ss.source_files  = "CKExstension"#, "Utils"
-    ss.dependency "RxSwift"
-    ss.dependency "RxCocoa"
-    ss.dependency "SnapKit"
-  end
-
+  spec.source_files  = "CKExstension"
+    spec.dependency "RxSwift"
+    spec.dependency "RxCocoa"
+    spec.dependency "SnapKit"
+  
 
   spec.requires_arc = true
 
