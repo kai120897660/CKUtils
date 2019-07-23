@@ -49,8 +49,7 @@
 		6319381522E597B900B0D2A2 /* BigData.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631937EF22E597B900B0D2A2 /* BigData.xcassets */; };
 		6319381D22E597D600B0D2A2 /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319381922E597D600B0D2A2 /* CustomTimer.swift */; };
 		6319382222E59B6B00B0D2A2 /* CKConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319381F22E59B6B00B0D2A2 /* CKConstant.swift */; };
-		6319382322E59B6B00B0D2A2 /* CKEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319382022E59B6B00B0D2A2 /* CKEnum.swift */; };
-		6319382422E59B6B00B0D2A2 /* CKFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319382122E59B6B00B0D2A2 /* CKFunction.swift */; };
+		6319382622E5A32100B0D2A2 /* CKFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319382522E5A32000B0D2A2 /* CKFunction.swift */; };
 		63BD4521222FF05C00A63352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD4520222FF05C00A63352 /* AppDelegate.swift */; };
 		63BD4523222FF05C00A63352 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD4522222FF05C00A63352 /* ViewController.swift */; };
 		63BD4526222FF05C00A63352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BD4524222FF05C00A63352 /* Main.storyboard */; };
@@ -121,8 +120,7 @@
 		631937EF22E597B900B0D2A2 /* BigData.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BigData.xcassets; sourceTree = "<group>"; };
 		6319381922E597D600B0D2A2 /* CustomTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
 		6319381F22E59B6B00B0D2A2 /* CKConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKConstant.swift; sourceTree = "<group>"; };
-		6319382022E59B6B00B0D2A2 /* CKEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKEnum.swift; sourceTree = "<group>"; };
-		6319382122E59B6B00B0D2A2 /* CKFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKFunction.swift; sourceTree = "<group>"; };
+		6319382522E5A32000B0D2A2 /* CKFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKFunction.swift; sourceTree = "<group>"; };
 		63BD451D222FF05C00A63352 /* CKUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BD4520222FF05C00A63352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63BD4522222FF05C00A63352 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +164,9 @@
 		631937A722E5938C00B0D2A2 /* CKExstension */ = {
 			isa = PBXGroup;
 			children = (
+				6319381922E597D600B0D2A2 /* CustomTimer.swift */,
+				6319382522E5A32000B0D2A2 /* CKFunction.swift */,
+				6319381F22E59B6B00B0D2A2 /* CKConstant.swift */,
 				631937A922E5938C00B0D2A2 /* UIButtonExtension.swift */,
 				631937AC22E5938C00B0D2A2 /* ColorString.swift */,
 				631937AD22E5938C00B0D2A2 /* ArrayExtension.swift */,
@@ -253,10 +254,6 @@
 		6319381622E597D600B0D2A2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				6319381F22E59B6B00B0D2A2 /* CKConstant.swift */,
-				6319382022E59B6B00B0D2A2 /* CKEnum.swift */,
-				6319382122E59B6B00B0D2A2 /* CKFunction.swift */,
-				6319381922E597D600B0D2A2 /* CustomTimer.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -472,7 +469,6 @@
 				6319382222E59B6B00B0D2A2 /* CKConstant.swift in Sources */,
 				631937F922E597B900B0D2A2 /* IBoxRandingViewModel.swift in Sources */,
 				6319380222E597B900B0D2A2 /* MissionRankingVC.swift in Sources */,
-				6319382322E59B6B00B0D2A2 /* CKEnum.swift in Sources */,
 				6319380822E597B900B0D2A2 /* RealFeedsModel.swift in Sources */,
 				6319380D22E597B900B0D2A2 /* LivePlayerView.m in Sources */,
 				631937B922E5938C00B0D2A2 /* ArrayExtension.swift in Sources */,
@@ -482,12 +478,12 @@
 				6319381D22E597D600B0D2A2 /* CustomTimer.swift in Sources */,
 				631937BE22E5938C00B0D2A2 /* StringExtension.swift in Sources */,
 				6319380022E597B900B0D2A2 /* AdminBaseVC.swift in Sources */,
+				6319382622E5A32100B0D2A2 /* CKFunction.swift in Sources */,
 				63BD4521222FF05C00A63352 /* AppDelegate.swift in Sources */,
 				631937F722E597B900B0D2A2 /* UserProfileViewModel.swift in Sources */,
 				631937FF22E597B900B0D2A2 /* IBoxListMonitorVC.swift in Sources */,
 				631937BA22E5938C00B0D2A2 /* ImageExtension.swift in Sources */,
 				6319380A22E597B900B0D2A2 /* IBoxRandingModel.swift in Sources */,
-				6319382422E59B6B00B0D2A2 /* CKFunction.swift in Sources */,
 				631937F822E597B900B0D2A2 /* IBoxListMonitorViewModel.swift in Sources */,
 				631937FC22E597B900B0D2A2 /* IBoxRankingVC.swift in Sources */,
 				6319380422E597B900B0D2A2 /* IBOXListMonitorModel.swift in Sources */,
