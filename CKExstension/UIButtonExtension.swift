@@ -12,7 +12,7 @@ import UIKit
 extension UIButton {
     
     ///创建导航栏按钮
-    class func ck_item(_ obj: Any?) -> UIButton {
+    class public func ck_item(_ obj: Any?) -> UIButton {
         let btn = UIButton()
         btn.ck_size = CGSize.init(width: kNavHeight, height: kNavHeight)
         if let title = obj as? String {
@@ -25,7 +25,7 @@ extension UIButton {
         return btn
     }
     
-    class func ck_item(image: String, target: Any?, action: Selector?) -> UIButton {
+    class public func ck_item(image: String, target: Any?, action: Selector?) -> UIButton {
         let btn = UIButton()
         btn.ck_size = CGSize.init(width: kNavHeight, height: kNavHeight)
         if target != nil && action != nil {
@@ -36,7 +36,7 @@ extension UIButton {
         return btn
     }
     
-    class func ck_item(title: String, target: Any?, action: Selector?) -> UIButton {
+    class public func ck_item(title: String, target: Any?, action: Selector?) -> UIButton {
         let btn = UIButton()
         if target != nil && action != nil {
             btn.addTarget(target!, action: action!, for: .touchUpInside)
@@ -49,7 +49,7 @@ extension UIButton {
         return btn
     }
     
-    class func ck_button(image: String, target: Any?, action: Selector?) -> UIButton {
+    class public func ck_button(image: String, target: Any?, action: Selector?) -> UIButton {
         let btn = UIButton()
         let img = UIImage.CK_Image(image)
         btn.ck_size = img.size
@@ -61,7 +61,7 @@ extension UIButton {
         return btn
     }
     
-    class func ck_button(title: String, target: Any?, action: Selector?) -> UIButton {
+    class public func ck_button(title: String, target: Any?, action: Selector?) -> UIButton {
         let btn = UIButton()
         if target != nil && action != nil {
             btn.addTarget(target!, action: action!, for: .touchUpInside)
@@ -75,7 +75,7 @@ extension UIButton {
         return btn
     }
     
-    class func ck_button(title: String) -> UIButton {
+    class public func ck_button(title: String) -> UIButton {
         let btn = UIButton()
         btn.setTitle(title, for: .normal)
         btn.setTitleColor(UIColor.white, for: .normal)
@@ -84,7 +84,7 @@ extension UIButton {
         return btn
     }
     
-    class func ck_button(image: String) -> UIButton {
+    class public func ck_button(image: String) -> UIButton {
         let btn = UIButton()
         let img = UIImage.CK_Image(image)
         btn.ck_size = img.size
@@ -94,7 +94,7 @@ extension UIButton {
         return btn
     }
     
-    class func ck_button(image: String, selectedImg: String) -> UIButton {
+    class public func ck_button(image: String, selectedImg: String) -> UIButton {
         let btn = UIButton.ck_button(image: image)
         btn.setImage(UIImage.CK_Image(selectedImg), for: .selected)
         

@@ -9,7 +9,7 @@
 import Foundation
 
 extension Array {
-    mutating func removeObject(_ obj: Element){
+    mutating public func removeObject(_ obj: Element){
         let index = self.indexObj(obj)
         if index <= self.count && index > 0 {
             self.remove(at: index)
@@ -17,7 +17,7 @@ extension Array {
         
     }
     
-    func indexObj(_  obj: Element) -> Int {
+    public func indexObj(_  obj: Element) -> Int {
         let index = self.index { (str) -> Bool in
             if (str as AnyObject).isEqual(obj) {
                 return true
@@ -30,7 +30,7 @@ extension Array {
         return index!
     }
     
-    func ck_objIndex(_ index: Int) -> Element? {
+    public func ck_objIndex(_ index: Int) -> Element? {
         if self.isEmpty {
             return nil
         }
@@ -41,7 +41,7 @@ extension Array {
     }
   
     
-//    public static func a() {
+//    public static public func a() {
 //
 //        let objIndex = class_getInstanceMethod(self, #selector(remove(at:)))
 //    }

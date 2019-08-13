@@ -2,8 +2,8 @@
 Pod::Spec.new do |spec|
 
 
-  spec.name         = "CKUtils"
-  spec.version      = "1.1.4"
+  spec.name         = "CKExstension"
+  spec.version      = "1.1.5"
   spec.summary      = "Custom Swift Utils"
   spec.description  = <<-DESC
                       this project is custom swift lib for utils   
@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
 
   spec.author             = { "陈凯文" => "kai120897660@sina.com" }
 
-  spec.swift_version= "4.2"
-  spec.platform     = :ios, "8.0"
+  spec.swift_version= "5.0"
+  spec.platform     = :ios, "10.0"
 
   spec.source       = { :git => "https://github.com/kai120897660/CKUtils.git", :tag => "#{spec.version}" }
 

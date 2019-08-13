@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 @objc extension UIColor {
-    class func colorSrting(_ string: String) -> UIColor {
+    class public func colorSrting(_ string: String) -> UIColor {
         return self.colorSrting(string, alpha: 1.0)
     }
-    class func colorSrting(_ string: String, alpha: CGFloat) -> UIColor {
+    class public func colorSrting(_ string: String, alpha: CGFloat) -> UIColor {
         
         var colorString : String!
         if (string.hasPrefix("#")) {

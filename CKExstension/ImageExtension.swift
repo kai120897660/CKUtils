@@ -11,7 +11,7 @@ import UIKit
 
 @objc extension UIImage {
     ///init image form file
-    class func CK_Image(_ imageName: String?) -> UIImage {
+    class public func CK_Image(_ imageName: String?) -> UIImage {
 //        let imageStr = "\(imageName)@\(Int(kMainScale))x"
 //        let path = Bundle.main.path(forResource: imageStr, ofType: "png")
 //        let image = UIImage.init(contentsOfFile: path!)
@@ -23,11 +23,11 @@ import UIKit
     }
     
     ///init image form color
-    class func imageWithColor(_ color: UIColor) -> UIImage? {
+    class public func imageWithColor(_ color: UIColor) -> UIImage? {
         return self.imageWithColor(color, size: CGSize.init(width: 1.0, height: 1.0))
     }
     ///init image form color, custom image size
-    class func imageWithColor(_  color: UIColor, size: CGSize) -> UIImage? {
+    class public func imageWithColor(_  color: UIColor, size: CGSize) -> UIImage? {
         let rect = CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
@@ -39,7 +39,7 @@ import UIKit
     }
     
     ///image clips to fillet
-    func filletImage() -> UIImage? {
+    public func filletImage() -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(self.size, false, 2.0)
         let rect = CGRect.init(x: 0, y: 0, width: self.size.width, height: self.size.height)
         UIGraphicsGetCurrentContext()?.addEllipse(in: rect)
@@ -55,7 +55,7 @@ import UIKit
         
     }
     
-    func resetImageOrientation() -> UIImage? {
+    public func resetImageOrientation() -> UIImage? {
         UIGraphicsBeginImageContext(self.size)
         let rect = CGRect.init(x: 0, y: 0, width: self.size.width, height: self.size.height)
 //        UIGraphicsGetCurrentContext()?.addEllipse(in: rect)

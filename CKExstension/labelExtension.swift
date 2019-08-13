@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-@objc extension UILabel {
-    func textShadow(_ str: String) {
+extension UILabel {
+    public func textShadow(_ str: String) {
         let myShadow = NSShadow()
         myShadow.shadowBlurRadius = 3
         myShadow.shadowOffset = CGSize.init(width: 1, height: 1)
@@ -20,7 +20,7 @@ import UIKit
         self.attributedText = attributedStr
     }
     
-    class func ck_label(_ fontSize: CGFloat) ->  UILabel {
+    class public func ck_label(_ fontSize: CGFloat) ->  UILabel {
         let label = UILabel()
         label.textColor = kTextBlack
         label.font = UIFont.systemFont(ofSize: fontSize)

@@ -11,14 +11,14 @@ import Foundation
 extension String {
     
     
-    func nilString() -> String {
+    public func nilString() -> String {
         if self == "(null)" || self == "null" {
             return ""
         }
         return self
     }
     
-    func stringToNum() -> NSNumber {
+    public func stringToNum() -> NSNumber {
         if self == "(null)" || self == "null" || self.isEmpty {
             return 0
         }
@@ -32,7 +32,7 @@ extension String {
     }
     
     ///设置文字和图片一行
-//    func attametTextImage(_ imageName: String) -> NSAttributedString {
+//    public func attametTextImage(_ imageName: String) -> NSAttributedString {
 //        let text = self + "  "
 //        let mutiAttStr = NSMutableAttributedString.init(string: text)
 //        let attachmet = NSTextAttachment()
@@ -44,39 +44,39 @@ extension String {
 //    }
     
     ///验证是否为合格邮箱
-    func isEmail() -> Bool {
+    public func isEmail() -> Bool {
         let rule = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         
         return self.checkString(rule)
     }
     
     ///只包含英文和数字
-    func isLettersNumber() -> Bool {
+    public func isLettersNumber() -> Bool {
         let rule = "[a-zA-Z0-9]+"
         return self.checkString(rule)
         
     }
     
     ///是否是纯数字
-    func isNumber() -> Bool {
+    public func isNumber() -> Bool {
         let rule = "^[0-9]*[1-9][0-9]*$"
         return self.checkString(rule)
     }
     
     ///只包含英文和汉字
-    func isLettersWords() -> Bool {
+    public func isLettersWords() -> Bool {
         let rule = "[a-zA-Z|\\u4e00-\\u9fa5]+"
         return self.checkString(rule)
     }
     
     ///只包含英文、汉字、数字
-    func isLettersWordsNumber() -> Bool {
+    public func isLettersWordsNumber() -> Bool {
         let rule = "^[A-Za-z0-9\\u4e00-\\u9fa5]+$"
         return self.checkString(rule)
     }
     
     ///验证是否是身份证
-    func isIdNumber() -> Bool {
+    public func isIdNumber() -> Bool {
         if self.count == 18 {
             let rule = "/^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{4}$"
             return self.checkString(rule)
@@ -85,7 +85,7 @@ extension String {
     }
     
     ///check phone number is true
-    func checkPhoneNumber() -> Bool {
+    public func checkPhoneNumber() -> Bool {
         if self.count == 11 {
             let rule = "^[1][3,4,5,7,8][0-9]{9}$"
             return self.checkString(rule)
@@ -93,12 +93,12 @@ extension String {
         return false
     }
     /// check something with regular
-    func checkString(_ rule: String) -> Bool  {
+    public func checkString(_ rule: String) -> Bool  {
         let predicate = NSPredicate(format: "SELF MATCHES %@", rule)
         return predicate.evaluate(with: self)
     }
     
-    func stringBytes() -> Int {
+    public func stringBytes() -> Int {
         var count = 0
         for item in self {
             if ("\u{4E00}" <= item  && item <= "\u{9FA5}")  ||  ("A" <= item && item <= "Z") {
@@ -111,19 +111,19 @@ extension String {
     }
     
     ///字符串转base64
-    func stringToBase64() -> String {
+    public func stringToBase64() -> String {
         return self.data(using: .utf8)?.base64EncodedString() ?? ""
     }
     
     ///设置文字和图片一行
-    func attametText(_ subText: String, _ attributeds :[NSAttributedString.Key : Any]) -> NSAttributedString {
+    public func attametText(_ subText: String, _ attributeds :[NSAttributedString.Key : Any]) -> NSAttributedString {
         let mutiAttStr = NSMutableAttributedString.init(string: self)
         mutiAttStr.addAttributes(attributeds, range: self.nsRangeString(subText))
         
         return mutiAttStr
     }
     
-    func nsRangeString(_ rangeStr: String) -> NSRange {
+    public func nsRangeString(_ rangeStr: String) -> NSRange {
         let range = self.range(of: rangeStr)
         guard let from = range?.lowerBound.samePosition(in: self.utf16),
             let to = range?.upperBound.samePosition(in: self.utf16) else {
@@ -132,7 +132,7 @@ extension String {
         return NSMakeRange(self.utf16.distance(from: self.utf16.startIndex, to: from), self.utf16.distance(from: from, to: to))
     }
     
-    func customSubString(_ from : Int, length : Int) -> String {
+    public func customSubString(_ from : Int, length : Int) -> String {
         if from >= self.count || from < 0 {
             return ""
         }
@@ -145,13 +145,13 @@ extension String {
     
     //MARK:     ---      时间字符串
     ///时间戳转时间 --  "yyyy-MM-dd HH:mm"
-    func timestampToTime() -> String {
+    public func timestampToTime() -> String {
 //        let timestamp = self.timeToTimestamp()
         let timeStr = self.timestampToTime("yyyy-MM-dd HH:mm")
         return timeStr
     }
     
-    func timestampToTime(_ formatter: String) -> String {
+    public func timestampToTime(_ formatter: String) -> String {
         let timestamp = TimeInterval(self.stringToNum().floatValue)
         let date = Date.init(timeIntervalSince1970: timestamp)
         let dateFormatter = DateFormatter()
@@ -161,11 +161,11 @@ extension String {
     }
 
     ///时间转时间戳 --  "yyyy-MM-dd HH:mm"
-    func timeToTimestamp() -> String {
+    public func timeToTimestamp() -> String {
         return timeToTimestamp("yyyy-MM-dd HH:mm")
     }
     
-    func timeToTimestamp(_ formatter: String) -> String {
+    public func timeToTimestamp(_ formatter: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = formatter
         var date = dateFormatter.date(from: self)
@@ -178,11 +178,11 @@ extension String {
 
     ///消息时间戳转时间
     ///毫秒为单位
-    func millisecondTimeStampToString() -> String {
+    public func millisecondTimeStampToString() -> String {
         return self.millisecondTimeStampToString("yyyy-MM-dd HH:mm")
     }
     
-    func millisecondTimeStampToString(_ formatter: String) -> String {
+    public func millisecondTimeStampToString(_ formatter: String) -> String {
         let num = Int(self.stringToNum().floatValue)
         if num == 0 {
             let timeStr = self.timeToTimestamp("yyyy-MM-dd HH:mm:ss")
@@ -193,7 +193,7 @@ extension String {
     }
     
     ///url转码
-//    func getUrl() -> String {
+//    public func getUrl() -> String {
 //
 //        var host = httpHeader
 //        if self.range(of: "ibox") != nil {
@@ -208,14 +208,14 @@ extension String {
 //        return url //?? ""
 //    }
     
-    //MARK:     ---      class func
-    static func newUUID() -> String {
+    //MARK:     ---      class public func
+    static public func newUUID() -> String {
         let uuid = CFUUIDCreate(nil)
         let uuidStr = CFUUIDCreateString(nil, uuid)
         return String(uuidStr!)
     }
     
-    static func jsonStr(_ obj: Any) -> String {
+    static public func jsonStr(_ obj: Any) -> String {
         let data = try? JSONSerialization.data(withJSONObject: obj, options: [])
         let str = String(data: data!, encoding: .utf8)
         

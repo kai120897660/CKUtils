@@ -112,7 +112,7 @@ extension UIView {
 //    }
     
     ///设置圆角
-    func addRoundedCorners(corners: UIRectCorner, radii: CGSize, viewRect: CGRect) {
+    public func addRoundedCorners(corners: UIRectCorner, radii: CGSize, viewRect: CGRect) {
         let path = UIBezierPath.init(roundedRect: viewRect, byRoundingCorners: corners, cornerRadii: radii)
         let layer = CAShapeLayer()
         layer.frame = viewRect
@@ -123,26 +123,26 @@ extension UIView {
     
     //MARK:    --   func
     ///设置视图阴影
-    func setShadow() {
+    public func setShadow() {
         self.layer.shadowColor = kTextGray.cgColor
         self.layer.shadowOpacity = 0.35
         self.layer.shadowOffset = CGSize.init(width: 1.0, height: 1.0)
     }
     
-    func setBlueShadow() {
+    public func setBlueShadow() {
         self.layer.shadowColor = kNavColor.cgColor
         self.layer.shadowOpacity = 0.35
         self.layer.shadowOffset = CGSize.init(width: 1.0, height: 1.0)
     }
     
     ///设置显示模式
-    func setShowMode(_ mode:  UIView.ContentMode) {
+    public func setShowMode(_ mode:  UIView.ContentMode) {
         self.clipsToBounds = true
         self.contentMode = mode
     }
     
     ///视图转图片
-    func viewToImage() -> UIImage {
+    public func viewToImage() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(self.ck_size, false, kMainScale)
 //        UIGraphicsBeginImageContext(self.ck_size)
         self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)

@@ -11,12 +11,12 @@ import Foundation
 extension Date {
     
     ///日期格式 "yyyy-MM-dd HH:mm"
-    func getDate() -> String {
+    public func getDate() -> String {
         return self.getDate("yyyy-MM-dd HH:mm")
     }
 
     ///
-    func getDate(_ dataFomartStr: String) -> String {
+    public func getDate(_ dataFomartStr: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dataFomartStr
         let timeStr = dateFormatter.string(from: self)
@@ -24,7 +24,7 @@ extension Date {
     }
     
     ///年份
-    func getYear() -> String {
+    public func getYear() -> String {
         let dateFormatter = DateFormatter()
         ///年份
         dateFormatter.dateFormat = "yyyy"
@@ -33,7 +33,7 @@ extension Date {
     }
     
     ///月份
-    func getMouth() -> String {
+    public func getMouth() -> String {
         let dateFormatter = DateFormatter()
         ///月份
         dateFormatter.dateFormat = "M"
@@ -42,7 +42,7 @@ extension Date {
     }
     
     ///日
-    func getDay() -> String {
+    public func getDay() -> String {
         let dateFormatter = DateFormatter()
         ///日
         dateFormatter.dateFormat = "d"
@@ -51,7 +51,7 @@ extension Date {
     }
     
     ///时间
-    func getHour() -> String {
+    public func getHour() -> String {
         let dateFormatter = DateFormatter()
         ///时间
         dateFormatter.dateFormat = "HH:mm"
@@ -60,7 +60,7 @@ extension Date {
     }
     
     ///获取当前时间戳
-    static func currentTimeStamp() -> String {
+    static public func currentTimeStamp() -> String {
         let date = Date()
         
         return String(date.timeIntervalSince1970)
@@ -69,7 +69,7 @@ extension Date {
     ///获取某年某月有多少天,包含润月
     ///year    年份
     ///mouth   月份
-    static func daysInCurrentMouth(_ year: Int, mouth: Int) -> Int {
+    static public func daysInCurrentMouth(_ year: Int, mouth: Int) -> Int {
         var isLeap = false
         if year % 100 == 0 {
             isLeap = year % 400 == 0
