@@ -11,24 +11,37 @@ import Foundation
 extension String {
     
     
-    static func nilString(_ str: String?) -> String {
-        if str == nil || str == "(null)" || str == "null" {
+    func nilString() -> String {
+        if self == "(null)" || self == "null" {
             return ""
         }
-        return str!
+        return self
+    }
+    
+    func stringToNum() -> NSNumber {
+        if self == "(null)" || self == "null" || self.isEmpty {
+            return 0
+        }
+        let nonDigits = CharacterSet.decimalDigits.inverted
+        let numStr = self.trimmingCharacters(in: nonDigits)
+        if let num = Float(numStr) {
+            
+            return NSNumber.init(value: num)
+        }
+        return 0
     }
     
     ///设置文字和图片一行
-    func attametTextImage(_ imageName: String) -> NSAttributedString {
-        let text = self + "  "
-        let mutiAttStr = NSMutableAttributedString.init(string: text)
-        let attachmet = NSTextAttachment()
-        attachmet.image = UIImage.CK_Image(imageName)
-        let attachmentAttStr = NSAttributedString.init(attachment: attachmet)
-        mutiAttStr.insert(attachmentAttStr, at: text.count)
-        
-        return mutiAttStr
-    }
+//    func attametTextImage(_ imageName: String) -> NSAttributedString {
+//        let text = self + "  "
+//        let mutiAttStr = NSMutableAttributedString.init(string: text)
+//        let attachmet = NSTextAttachment()
+//        attachmet.image = UIImage.CK_Image(imageName)
+//        let attachmentAttStr = NSAttributedString.init(attachment: attachmet)
+//        mutiAttStr.insert(attachmentAttStr, at: text.count)
+//        
+//        return mutiAttStr
+//    }
     
     ///验证是否为合格邮箱
     func isEmail() -> Bool {
@@ -139,7 +152,7 @@ extension String {
     }
     
     func timestampToTime(_ formatter: String) -> String {
-        let timestamp = TimeInterval(numString(self))
+        let timestamp = TimeInterval(self.stringToNum().floatValue)
         let date = Date.init(timeIntervalSince1970: timestamp)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = formatter
@@ -170,7 +183,7 @@ extension String {
     }
     
     func millisecondTimeStampToString(_ formatter: String) -> String {
-        let num = Int(numString(self))
+        let num = Int(self.stringToNum().floatValue)
         if num == 0 {
             let timeStr = self.timeToTimestamp("yyyy-MM-dd HH:mm:ss")
             return timeStr.timestampToTime(formatter)
@@ -179,24 +192,9 @@ extension String {
         return time.timestampToTime(formatter)
     }
     
-    
-    func projectTime() -> String {
-        let currentTime = Date().timeIntervalSince1970
-        let diffTime = TimeInterval(self)! - currentTime
-        if diffTime <= 0 {
-            return localizedGroup("Project", "reviewed")
-        }else {
-            return "\(Int(ceil(diffTime / 3600.0 / 24.0)))" + localizedString("TaskTimeText")
-        }
-    }
-    
     ///url转码
 //    func getUrl() -> String {
-////        let str = httpHeader + self
-////        let set = NSMutableCharacterSet.init(charactersIn: "`#%^{}\"[]|\\<> ")
-////        set.formUnion(with: CharacterSet.urlQueryAllowed)
-////        let url = str.addingPercentEncoding(withAllowedCharacters: set as CharacterSet)
-//        
+//
 //        var host = httpHeader
 //        if self.range(of: "ibox") != nil {
 //            host = httpHeader.components(separatedBy: "ibox").first!
@@ -206,7 +204,7 @@ extension String {
 //        }
 //        let str = self.replacingOccurrences(of: "\\", with: "/")
 //        let url = (host + str)//.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-//        
+//
 //        return url //?? ""
 //    }
     

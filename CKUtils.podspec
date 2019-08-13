@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "CKUtils"
-  spec.version      = "1.1.2"
+  spec.version      = "1.1.4"
   spec.summary      = "Custom Swift Utils"
   spec.description  = <<-DESC
                       this project is custom swift lib for utils   
@@ -23,9 +23,9 @@ Pod::Spec.new do |spec|
 
 
   spec.source_files  = "CKExstension"
-    spec.dependency "RxSwift"
-    spec.dependency "RxCocoa"
-    spec.dependency "SnapKit"
+#    spec.dependency "RxSwift"
+#    spec.dependency "RxCocoa"
+#    spec.dependency "SnapKit"
   
 
   spec.requires_arc = true

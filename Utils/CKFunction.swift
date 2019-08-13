@@ -38,24 +38,6 @@ func localizedGroup(_ key1: String, _ key2: String) -> String {
     return word1 + word2
 }
 
-///filter nil string
-func nilString(_ str: String?) -> String {
-    return String.nilString(str)
-}
-
-func numString(_ str: String?) -> CGFloat {
-    if str == nil || str == "(null)" || str == "null" || (str?.isEmpty)! {
-        return 0
-    }
-    let nonDigits = CharacterSet.decimalDigits.inverted
-    let numStr = str!.trimmingCharacters(in: nonDigits)
-    if let num = Float(numStr) {
-        
-        return CGFloat(num)
-    }
-    return 0
-}
-
 ///字体大小
 func ck_fontSize(_ size: CGFloat) -> UIFont {
     return UIFont.systemFont(ofSize: size)
