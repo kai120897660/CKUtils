@@ -16,9 +16,6 @@
 		631937BC22E5938C00B0D2A2 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937B022E5938C00B0D2A2 /* ViewExtension.swift */; };
 		631937BE22E5938C00B0D2A2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937B222E5938C00B0D2A2 /* StringExtension.swift */; };
 		631937C022E5938C00B0D2A2 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631937B422E5938C00B0D2A2 /* DateExtension.swift */; };
-		6319381D22E597D600B0D2A2 /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319381922E597D600B0D2A2 /* CustomTimer.swift */; };
-		6319382222E59B6B00B0D2A2 /* CKConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319381F22E59B6B00B0D2A2 /* CKConstant.swift */; };
-		6319382622E5A32100B0D2A2 /* CKFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6319382522E5A32000B0D2A2 /* CKFunction.swift */; };
 		63BD4521222FF05C00A63352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD4520222FF05C00A63352 /* AppDelegate.swift */; };
 		63BD4523222FF05C00A63352 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD4522222FF05C00A63352 /* ViewController.swift */; };
 		63BD4526222FF05C00A63352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63BD4524222FF05C00A63352 /* Main.storyboard */; };
@@ -55,9 +52,6 @@
 		631937B022E5938C00B0D2A2 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		631937B222E5938C00B0D2A2 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		631937B422E5938C00B0D2A2 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
-		6319381922E597D600B0D2A2 /* CustomTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
-		6319381F22E59B6B00B0D2A2 /* CKConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKConstant.swift; sourceTree = "<group>"; };
-		6319382522E5A32000B0D2A2 /* CKFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CKFunction.swift; sourceTree = "<group>"; };
 		63BD451D222FF05C00A63352 /* CKUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BD4520222FF05C00A63352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63BD4522222FF05C00A63352 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +95,6 @@
 		631937A722E5938C00B0D2A2 /* CKExtension */ = {
 			isa = PBXGroup;
 			children = (
-				6319381F22E59B6B00B0D2A2 /* CKConstant.swift */,
 				631937A922E5938C00B0D2A2 /* UIButtonExtension.swift */,
 				631937AC22E5938C00B0D2A2 /* ColorString.swift */,
 				631937AD22E5938C00B0D2A2 /* ArrayExtension.swift */,
@@ -115,19 +108,9 @@
 			path = CKExtension;
 			sourceTree = "<group>";
 		};
-		6319381622E597D600B0D2A2 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				6319382522E5A32000B0D2A2 /* CKFunction.swift */,
-				6319381922E597D600B0D2A2 /* CustomTimer.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		63BD4514222FF05C00A63352 = {
 			isa = PBXGroup;
 			children = (
-				6319381622E597D600B0D2A2 /* Utils */,
 				631937A722E5938C00B0D2A2 /* CKExtension */,
 				63BD451F222FF05C00A63352 /* CKUtils */,
 				63BD4534222FF05E00A63352 /* CKUtilsTests */,
@@ -245,13 +228,16 @@
 				TargetAttributes = {
 					63BD451C222FF05C00A63352 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 					63BD4530222FF05E00A63352 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = 63BD451C222FF05C00A63352;
 					};
 					63BD453B222FF05E00A63352 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = 63BD451C222FF05C00A63352;
 					};
 				};
@@ -315,11 +301,8 @@
 				18EAC27E230F80D50049F181 /* UILabelExtension.swift in Sources */,
 				631937B622E5938C00B0D2A2 /* UIButtonExtension.swift in Sources */,
 				631937BC22E5938C00B0D2A2 /* ViewExtension.swift in Sources */,
-				6319382222E59B6B00B0D2A2 /* CKConstant.swift in Sources */,
 				631937B922E5938C00B0D2A2 /* ArrayExtension.swift in Sources */,
-				6319381D22E597D600B0D2A2 /* CustomTimer.swift in Sources */,
 				631937BE22E5938C00B0D2A2 /* StringExtension.swift in Sources */,
-				6319382622E5A32100B0D2A2 /* CKFunction.swift in Sources */,
 				63BD4521222FF05C00A63352 /* AppDelegate.swift in Sources */,
 				631937BA22E5938C00B0D2A2 /* ImageExtension.swift in Sources */,
 			);
@@ -506,7 +489,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ck.CKUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -525,7 +508,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ck.CKUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -545,7 +528,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ck.CKUtilsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CKUtils.app/CKUtils";
 			};
@@ -566,7 +549,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ck.CKUtilsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CKUtils.app/CKUtils";
 			};
@@ -586,7 +569,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ck.CKUtilsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CKUtils;
 			};
@@ -606,7 +589,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ck.CKUtilsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = CKUtils;
 			};

@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "CKExtension"
-  spec.version      = "1.1.6"
+  spec.version      = "1.1.7"
   spec.summary      = "Custom Swift Utils"
   spec.description  = <<-DESC
                       this project is custom swift lib for utils   

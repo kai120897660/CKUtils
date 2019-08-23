@@ -143,7 +143,7 @@ extension UIView {
     
     ///视图转图片
     public func viewToImage() -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(self.ck_size, false, kMainScale)
+        UIGraphicsBeginImageContextWithOptions(self.ck_size, false, UIScreen.main.scale)
 //        UIGraphicsBeginImageContext(self.ck_size)
         self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
         let image = UIGraphicsGetImageFromCurrentImageContext()

@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 
+private let btnHeight = CGFloat(44)
+
 extension UIButton {
     
     ///创建导航栏按钮
     class public func ck_item(_ obj: Any?) -> UIButton {
         let btn = UIButton()
-        btn.ck_size = CGSize.init(width: kNavHeight, height: kNavHeight)
+        btn.ck_size = CGSize.init(width: btnHeight, height: btnHeight)
         if let title = obj as? String {
             btn.setTitle(title, for: .normal)
             btn.setTitleColor(UIColor.white, for: .normal)
@@ -27,7 +29,7 @@ extension UIButton {
     
     class public func ck_item(image: String, target: Any?, action: Selector?) -> UIButton {
         let btn = UIButton()
-        btn.ck_size = CGSize.init(width: kNavHeight, height: kNavHeight)
+        btn.ck_size = CGSize.init(width: btnHeight, height: btnHeight)
         if target != nil && action != nil {
             btn.addTarget(target!, action: action!, for: .touchUpInside)
         }
@@ -45,7 +47,7 @@ extension UIButton {
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         btn.sizeToFit()
-        btn.ck_size = CGSize.init(width: max(kNavHeight, btn.ck_width), height: kNavHeight)
+        btn.ck_size = CGSize.init(width: max(btnHeight, btn.ck_width), height: btnHeight)
         return btn
     }
     
@@ -69,7 +71,6 @@ extension UIButton {
         btn.setTitle(title, for: .normal)
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.sizeToFit()
-//        let btnWidth = btn.ck_width > kNavHeight ? btn.ck_width : kNavHeight
         btn.ck_size = CGSize.init(width: btn.ck_width + 12, height: btn.ck_height + 8)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         return btn
