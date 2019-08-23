@@ -16,10 +16,10 @@ import UIKit
 //        let path = Bundle.main.path(forResource: imageStr, ofType: "png")
 //        let image = UIImage.init(contentsOfFile: path!)
         if imageName == nil || (imageName?.count)! <= 0 {
-            return self.imageWithColor(kNoneImageColor)!
+            return self.imageWithColor(UIColor.cyan)!
         }
         let image = UIImage.init(named: imageName!)
-        return image == nil ? self.imageWithColor(kNoneImageColor)! : image!
+        return image == nil ? self.imageWithColor(UIColor.cyan)! : image!
     }
     
     ///init image form color

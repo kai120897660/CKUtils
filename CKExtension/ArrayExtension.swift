@@ -9,6 +9,7 @@
 import Foundation
 
 extension Array {
+    
     mutating public func removeObject(_ obj: Element){
         let index = self.indexObj(obj)
         if index <= self.count && index > 0 {
@@ -18,16 +19,15 @@ extension Array {
     }
     
     public func indexObj(_  obj: Element) -> Int {
-        let index = self.index { (str) -> Bool in
-            if (str as AnyObject).isEqual(obj) {
-                return true
+        var index = 0
+        for item in self {
+            if (item as AnyObject).isEqual(obj) {
+                break
             }
-            return false
+            index += 1
         }
-        if index == nil {
-            return 0
-        }
-        return index!
+        
+        return index >= self.count ? 0 : index
     }
     
     public func ck_objIndex(_ index: Int) -> Element? {
@@ -39,12 +39,6 @@ extension Array {
         }
         return self[index]
     }
-  
-    
-//    public static public func a() {
-//
-//        let objIndex = class_getInstanceMethod(self, #selector(remove(at:)))
-//    }
     
 }
 

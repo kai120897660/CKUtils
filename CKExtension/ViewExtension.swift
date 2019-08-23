@@ -124,13 +124,13 @@ extension UIView {
     //MARK:    --   func
     ///设置视图阴影
     public func setShadow() {
-        self.layer.shadowColor = kTextGray.cgColor
+        self.layer.shadowColor = UIColor.lightGray.cgColor
         self.layer.shadowOpacity = 0.35
         self.layer.shadowOffset = CGSize.init(width: 1.0, height: 1.0)
     }
     
     public func setBlueShadow() {
-        self.layer.shadowColor = kNavColor.cgColor
+        self.layer.shadowColor = UIColor.lightGray.cgColor
         self.layer.shadowOpacity = 0.35
         self.layer.shadowOffset = CGSize.init(width: 1.0, height: 1.0)
     }

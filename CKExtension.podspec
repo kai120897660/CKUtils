@@ -2,8 +2,8 @@
 Pod::Spec.new do |spec|
 
 
-  spec.name         = "CKExstension"
-  spec.version      = "1.1.5"
+  spec.name         = "CKExtension"
+  spec.version      = "1.1.6"
   spec.summary      = "Custom Swift Utils"
   spec.description  = <<-DESC
                       this project is custom swift lib for utils   
@@ -22,10 +22,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/kai120897660/CKUtils.git", :tag => "#{spec.version}" }
 
 
-  spec.source_files  = "CKExstension"
-#    spec.dependency "RxSwift"
-#    spec.dependency "RxCocoa"
-#    spec.dependency "SnapKit"
+  spec.source_files  = "CKExtension"
   
 
   spec.requires_arc = true

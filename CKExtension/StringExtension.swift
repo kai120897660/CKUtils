@@ -10,7 +10,7 @@ import Foundation
 
 extension String {
     
-    
+    ///过滤
     public func nilString() -> String {
         if self == "(null)" || self == "null" {
             return ""
@@ -30,18 +30,6 @@ extension String {
         }
         return 0
     }
-    
-    ///设置文字和图片一行
-//    public func attametTextImage(_ imageName: String) -> NSAttributedString {
-//        let text = self + "  "
-//        let mutiAttStr = NSMutableAttributedString.init(string: text)
-//        let attachmet = NSTextAttachment()
-//        attachmet.image = UIImage.CK_Image(imageName)
-//        let attachmentAttStr = NSAttributedString.init(attachment: attachmet)
-//        mutiAttStr.insert(attachmentAttStr, at: text.count)
-//        
-//        return mutiAttStr
-//    }
     
     ///验证是否为合格邮箱
     public func isEmail() -> Bool {

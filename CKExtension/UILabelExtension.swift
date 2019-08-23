@@ -1,9 +1,9 @@
 //
-//  labelExtension.swift
-//  qiqi_ios
+//  UILabelExtension.swift
+//  CKUtils
 //
-//  Created by design on 2018/8/16.
-//  Copyright © 2018年 design. All rights reserved.
+//  Created by APPLE on 2019/8/23.
+//  Copyright © 2019 ck.com. All rights reserved.
 //
 
 import Foundation
@@ -22,10 +22,8 @@ extension UILabel {
     
     class public func ck_label(_ fontSize: CGFloat) ->  UILabel {
         let label = UILabel()
-        label.textColor = kTextBlack
+        label.textColor = UIColor.black
         label.font = UIFont.systemFont(ofSize: fontSize)
         return label
     }
-    
-    
 }
